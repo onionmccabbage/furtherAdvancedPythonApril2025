@@ -28,7 +28,7 @@ Monday
 > Factory pattern
 > Facade pattern
 > command pattern
-- proxy pattern
+> proxy pattern
 > constructor pattern
 - after lunch review exercise
 - immediate Python
