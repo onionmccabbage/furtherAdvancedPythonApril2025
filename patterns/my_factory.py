@@ -29,7 +29,11 @@ class CreatureFactory:
     '''This is a single-point-of-access to manufacture any type of creature avilable'''
     def make_sound(self, obj):
         # e.g. cat, lion etc
-        return eval(obj)().make_noise()    
+        return eval(obj)().make_noise() 
+    def __str__(self):
+        '''__str__ is used by print - we may override it'''  
+    def __repr__(self):
+        '''__repr__ is used in immediate mode (and in Jupyter)'''
 
 if __name__ == '__main__':
     # Python will ALWAYS set sys.argv[0] to the name of the currently running module
