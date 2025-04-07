@@ -21,6 +21,7 @@ def squares(m ,n):
     for i in range(m,n):
         s.append(i*i)
     return s
+
 @showArgs
 def otherFn(x,y,z):
     '''multiple x y and z'''
