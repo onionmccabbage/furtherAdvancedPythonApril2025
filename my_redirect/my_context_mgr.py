@@ -23,6 +23,7 @@ def main():
     # now any time we need ot redirect we use our instance
     with r:
         print(my_text)
+    fout.close() # good idea to tidy up
     print('back to console')
 
 

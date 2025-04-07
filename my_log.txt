@@ -1,1 +1,2 @@
 this will redirect to a file instead of the console
+redirected output
