@@ -6,6 +6,8 @@ def main():
     customer = Customer()
     customer.makePayment()
 
+# anything with pre- and post- double undescore is a part of Python
+# known as 'dunder'
 if __name__ == '__main__':
     for user in range(0,100):
         main()
