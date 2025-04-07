@@ -1,6 +1,6 @@
 def validString(f):
     def newFunc(*args, **kwargs):
-        for arg in args:
+        for arg in args: # NB args is always a tuple
             if type(arg)== str and arg != '':
                 pass
             else:
@@ -18,3 +18,4 @@ if __name__ == '__main__':
     T = toUpper(t) # all fine
     q = ''
     Q = toUpper(q) # oh dear
+    print(T, Q)

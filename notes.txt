@@ -17,20 +17,20 @@ recordings...
 question: write or adapt existing Robot modules
 
 Monday
-- welcome
+> welcome
 - we will be installing additional packages as needed
 - conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 > design patterns - following proven good practices
-- anti-patterns - when things go wrong and you do it again!!!
+> anti-patterns - when things go wrong and you do it again!!!
 > Decorator pattern
 > Factory pattern
 > Facade pattern
 > command pattern
 > proxy pattern
 > constructor pattern
-- after lunch review exercise
+> after lunch review exercise
 - immediate Python
 - Abstract base class
 - we will need Jupyter Notebooks later in the week

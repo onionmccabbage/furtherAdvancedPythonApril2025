@@ -2,6 +2,7 @@
 # Here we will manufacture creatures
 
 from abc import ABCMeta, abstractmethod
+import sys
 
 # we may declare an abstract class
 class Animal(metaclass=ABCMeta):
@@ -31,7 +32,18 @@ class CreatureFactory:
         return eval(obj)().make_noise()    
 
 if __name__ == '__main__':
+    # Python will ALWAYS set sys.argv[0] to the name of the currently running module
+    print(sys.argv) # there is always a list of system arguments (string)
+
+
     cf = CreatureFactory() # an instance of our factory
-    creature = input('Which creature: ')
-    noise = cf.make_sound(creature) 
-    print(f'The {creature} says {noise}')
+    
+    # check to see if a 'creature' has already been provided as a system argument
+    if len(sys.argv) > 1:
+        # creature = input('Which creature: ')
+        creature = sys.argv[1]
+        if creature in ('Cat', 'Dog', 'Lion', 'Bat'):
+            noise = cf.make_sound(creature) 
+            print(f'The {creature} says {noise}')
+        else:
+            pass # we could raise an exception
