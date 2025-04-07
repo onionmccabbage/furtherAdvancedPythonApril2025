@@ -6,13 +6,15 @@ Toby Dussek
 
 9:30  start
 11:00 coffee
-12:30 lunch until 1:30
+12:00 lunch until 1:00
 3:00  tea break
 4:30  end
 
 repo https://github.com/onionmccabbage/furtherAdvancedPythonApril2025
 course website https://sites.neueda.com/lm_ericsson_beyond_advanced_python/site/index.html
 recordings...
+
+question: write or adapt existing Robot modules
 
 Monday
 - welcome
@@ -27,7 +29,7 @@ Monday
 - Facade pattern
 - command pattern
 - proxy pattern
-- constructor pattern
+> constructor pattern
 - after lunch review exercise
 - immediate Python
 - Abstract base class
