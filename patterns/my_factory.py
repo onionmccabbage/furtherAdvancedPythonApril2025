@@ -24,5 +24,14 @@ class Bat(Animal):
     def make_noise(self):
         return '______'
     
+class CreatureFactory:
+    '''This is a single-point-of-access to manufacture any type of creature avilable'''
+    def make_sound(self, obj):
+        # e.g. cat, lion etc
+        return eval(obj)().make_noise()    
 
-    
+if __name__ == '__main__':
+    cf = CreatureFactory() # an instance of our factory
+    creature = input('Which creature: ')
+    noise = cf.make_sound(creature) 
+    print(f'The {creature} says {noise}')
