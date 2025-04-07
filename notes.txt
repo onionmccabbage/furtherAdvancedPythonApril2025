@@ -25,7 +25,7 @@ Monday
 - design patterns - following proven good practices
 - anti-patterns - when things go wrong and you do it again!!!
 > Decorator pattern
-- Factory pattern
+> Factory pattern
 - Facade pattern
 - command pattern
 - proxy pattern
