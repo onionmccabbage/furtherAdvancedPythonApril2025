@@ -29,13 +29,38 @@ class BuyStock(Order):
         return self.stock.buy()
 
 class SellStock(Order):
-    pass
+    '''enable a command to be executed to sell'''
+    def __init__(self, stock):
+        self.stock = stock
+    @property
+    def stock(self):
+        return self.__stock
+    @stock.setter
+    def stock(self, new_stock):
+        if type(new_stock) == StockTrade:
+            self.__stock = new_stock
+        else:
+            raise TypeError('Missing required stock trade instance')
+    def execute(self):
+        return self.stock.sell()
 
 class Agent:
-    pass
+    '''The agent can issue commands (things to do)'''
+    def __init__(self):
+        self.__order_queue = [] # an empty list
+    def placeOrder(self, order):
+        self.__order_queue.append(order)
+        # this command might be asynchronous, there may be latency
+        order.execute()
 
 def main():
-    pass
+    stock = StockTrade()
+    buy   = BuyStock(stock)
+    sell  = SellStock(stock)
+    agent = Agent()
+    # invoke some commands
+    agent.placeOrder(buy)
+    agent.placeOrder(sell)
 
 if __name__ == '__main__':
     main()
