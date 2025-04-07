@@ -21,8 +21,18 @@ def squares(m ,n):
     for i in range(m,n):
         s.append(i*i)
     return s
+@showArgs
+def otherFn(x,y,z):
+    '''multiple x y and z'''
+    return x*y*z
+
 
 if __name__ == '__main__':
     # the following code only executes when we run this module directly (not via import)
-    result = squares(1, 11)
+    result = squares(1, 11) # here we use all positional arguments
     print(result)
+    r2 = squares(m=-10, n=0) # here we use all keyword arguments
+    print(r2)
+    # we may apply decorators across ANY function
+    o = otherFn(5,6,z=7)
+    print(o)
