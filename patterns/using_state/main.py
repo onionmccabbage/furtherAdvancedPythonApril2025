@@ -9,6 +9,12 @@ def main():
     '''exercise the code'''
     c = Laptop()
     c.change(On)
+    c.change(Off)
+    c.change(Sleep) # fails
+    c.change(On)
+    c.change(Sleep)
+    c.change(Hybernate)
+    c.change(On)
 
 if __name__ == '__main__':
     main()
