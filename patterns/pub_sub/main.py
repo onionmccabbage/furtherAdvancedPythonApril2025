@@ -4,7 +4,7 @@ from _print_sub import PrintSub
 from _media_sub import MediaSub
 
 # here we have a global tuple
-subs_t = (EmailSub, PrintSub, MediaSub, EmailSub)
+subs_t = (EmailSub, PrintSub, MediaSub)
 
 def main():
     '''invoke the parts of our project'''
