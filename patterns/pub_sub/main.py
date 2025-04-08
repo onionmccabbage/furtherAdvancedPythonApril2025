@@ -3,7 +3,7 @@ from _email_sub import EmailSub
 from _print_sub import PrintSub
 from _media_sub import MediaSub
 
-# here we have aa global tuple
+# here we have a global tuple
 subs_t = (EmailSub, PrintSub, MediaSub, EmailSub)
 
 def main():

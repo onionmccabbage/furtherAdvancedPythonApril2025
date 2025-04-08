@@ -5,6 +5,7 @@ import abc
 # Unless we do otherwise, every class will inherit from 'object'
 class Planar(metaclass=abc.ABCMeta):
 # class Planar(metaclass=ABCMeta):
+    __slots__ = ('__x', '__y') # NB ___slots__ must appear in every step of the inheritance chain
     def __init__(self):
         pass
     @abc.abstractmethod
