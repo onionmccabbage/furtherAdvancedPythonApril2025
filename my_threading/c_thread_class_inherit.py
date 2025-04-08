@@ -2,6 +2,9 @@ from threading import Thread
 import random
 import time
 
+# NB the Thread class is not a direct Thread, it is a thread-access object
+# Pyhton asks the O/S for the next available thread
+
 class MyClass(Thread): # we inherit everything from the Thread class
     '''to use a class inheriting from thread, implement a run method'''
     def __init__(self, n):
@@ -16,7 +19,7 @@ def main():
     '''invoke the class as a thread'''
     # to work with many threads, use loops
     thread_list = []
-    for _ in range(0,8):
+    for _ in range(0,2048):
         thread_list.append( MyClass(_) )
     for thread in thread_list:
         thread.start()
