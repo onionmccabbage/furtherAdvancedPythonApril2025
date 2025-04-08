@@ -38,7 +38,7 @@ Monday
 
 Tuesday
 > how to access the course recordings
-- using __str__ and __repr__
+> using __str__ and __repr__
 - architectural patterns: inheritance, composition...
 q - whats the point of __slots__
 - stateful pattern
