@@ -5,7 +5,7 @@ import abc
 # Unless we do otherwise, every class will inherit from 'object'
 class Planar(metaclass=abc.ABCMeta):
 # class Planar(metaclass=ABCMeta):
-    __slots__ = ('__x', '__y') # NB ___slots__ must appear in every step of the inheritance chain
+    __slots__ = ('__x', '__y')
     def __init__(self):
         pass
     @abc.abstractmethod
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     p = Point(3,4)
     print(p, p.hypot()) # 5.0
     # add an arbitrary property to p
-    p.__w = 'oops'
+    p.__w = 'oops' # not allowed since we have resricted the slots
 
     try:
         p_err = Point('3', '4')

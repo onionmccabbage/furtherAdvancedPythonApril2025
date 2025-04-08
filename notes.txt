@@ -40,10 +40,10 @@ Tuesday
 > how to access the course recordings
 > using __str__ and __repr__
 - architectural patterns: inheritance, composition...
-q - whats the point of __slots__
+> whats the point of __slots__
 > stateful pattern
-- functional design
-- observables and subscribers
+> functional design
+> observables and subscribers
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 - concurrency and parallel code
