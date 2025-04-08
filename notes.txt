@@ -10,8 +10,8 @@ Toby Dussek
 3:00  tea break
 4:30  end
 
-repo https://github.com/onionmccabbage/furtherAdvancedPythonApril2025
 course website https://sites.neueda.com/lm_ericsson_beyond_advanced_python/site/index.html
+repo https://github.com/onionmccabbage/furtherAdvancedPythonApril2025
 recordings...
 
 question: write or adapt existing Robot modules
@@ -31,13 +31,13 @@ Monday
 > proxy pattern
 > constructor pattern
 > after lunch review exercise
-- immediate Python
+> immediate Python
 > redirection and context
 - Abstract base class
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
-- how to access the course recordings
+> how to access the course recordings
 - using __str__ and __repr__
 - architectural patterns: inheritance, composition...
 - stateful pattern

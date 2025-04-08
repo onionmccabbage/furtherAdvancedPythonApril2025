@@ -1,0 +1,47 @@
+import abc
+# or....
+# from abc import ABCMeta
+
+# Unless we do otherwise, every class will inherit from 'object'
+class Planar(metaclass=abc.ABCMeta):
+# class Planar(metaclass=ABCMeta):
+    def __init__(self):
+        pass
+    @abc.abstractmethod
+    def hypot(self):
+        pass
+
+class Point(Planar):
+    '''A 2d-point defined by x and y'''
+    __slots__ = ('__x', '__y')
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    @property
+    def x(self):
+        return self.__x # __x is 'name mangled' makes it almost impossible to access outside thsi class
+    @x.setter
+    def x(self, new_x):
+        '''validate x as int or float'''
+        if type(new_x) in (int, float):
+            self.__x = new_x
+        else:
+            raise TypeError('x must be numeric')
+    @property
+    def y(self):
+        return self.__y 
+    @y.setter
+    def y(self, new_y):
+        '''validate y as int or float'''
+        if type(new_y) in (int, float):
+            self.__y = new_y
+        else:
+            raise TypeError('y must be numeric')
+    def hypot(self):
+        '''derive the hypotenuse from x and y'''
+        h = (self.x**2 + self.y**2)**0.5
+        return h
+
+if __name__ == '__main__':
+    p = Point(3,4)
+    print(p.hypot()) # 5.0
