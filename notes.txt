@@ -41,7 +41,7 @@ Tuesday
 > using __str__ and __repr__
 - architectural patterns: inheritance, composition...
 q - whats the point of __slots__
-- stateful pattern
+> stateful pattern
 - functional design
 - observables and subscribers
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
