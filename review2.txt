@@ -1,4 +1,4 @@
-Python Review Exercise 2
+Python Review Exercise 2 until 4:25-ish
 ========================
 For this project, use modules and imports to separate your code structures
 Use the 'Weather' class (e.g. import it).
