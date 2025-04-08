@@ -39,7 +39,7 @@ class Point(Planar):
             raise TypeError('y must be numeric')
     def hypot(self):
         '''derive the hypotenuse from x and y'''
-        h = (self.x**2 + self.y**2)**0.5
+        h = (self.x**2 + self.y**2)**0.5 # NB here we call te getter-mrthod for __x and __y
         return h
     def __str__(self):
         '''override the built in __str__ to customize print for this class'''
@@ -52,6 +52,9 @@ class Point(Planar):
 if __name__ == '__main__':
     p = Point(3,4)
     print(p, p.hypot()) # 5.0
+    # add an arbitrary property to p
+    p.__w = 'oops'
+
     try:
         p_err = Point('3', '4')
     except TypeError as err:
