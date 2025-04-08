@@ -41,7 +41,16 @@ class Point(Planar):
         '''derive the hypotenuse from x and y'''
         h = (self.x**2 + self.y**2)**0.5
         return h
+    # def __str__
 
 if __name__ == '__main__':
     p = Point(3,4)
     print(p.hypot()) # 5.0
+    try:
+        p_err = Point('3', '4')
+    except TypeError as err:
+        print(f'Problem: {err}')
+    except Exception as err:
+        print(f'Unexpected problem: {err}')
+    finally:
+        print('The finally block always runs') # good place to tidy up
