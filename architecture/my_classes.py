@@ -41,11 +41,17 @@ class Point(Planar):
         '''derive the hypotenuse from x and y'''
         h = (self.x**2 + self.y**2)**0.5
         return h
-    # def __str__
+    def __str__(self):
+        '''override the built in __str__ to customize print for this class'''
+        return f'Point at x:{self.x} y:{self.y}'
+    def __repr__(self): # also used in Jupyter
+        '''override the built-in __repr__ to customize representation of this class'''
+        return f'Point at x:{self.x} y:{self.y}'
+
 
 if __name__ == '__main__':
     p = Point(3,4)
-    print(p.hypot()) # 5.0
+    print(p, p.hypot()) # 5.0
     try:
         p_err = Point('3', '4')
     except TypeError as err:
