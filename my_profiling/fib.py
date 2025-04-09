@@ -1,3 +1,6 @@
+import timeit
+from functools import reduce
+
 def fib1(n):
     '''here is a low performance fibonacci function'''
     if n in (0,1):
@@ -5,6 +8,17 @@ def fib1(n):
     else:
         '''recursively call tis function again'''
         return ( fib1(n-1)+fib1(n-2) )
-    
+
+def fib2(n):
+    '''a more performant solution''' 
+    sequence = (0,1)
+    for _ in range(2, n+2):
+        # NB we do not mutate the tuple
+        sequence += (reduce( lambda a,b: a+b, sequence[-2:] ))
+    return sequence[-1] # return the last member of the sequence
+
 if __name__ == '__main__':
-    print(fib1(5))
+    start = timeit.default_timer()
+    print(fib2(28)) # 0.14 sec for fib1
+    end=timeit.default_timer()
+    print(f'total time: {end-start}')
