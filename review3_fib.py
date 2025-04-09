@@ -29,25 +29,25 @@ def fib2(n):
 
 def fib3(n): # on my laptop this is fastest
     a, b = 0, 1
-    for _ in range(n):
+    for _ in range(n+1):
         a, b = b, a+b
     return a
 
 # CAUTION: @profile will significantly affect any time measurements
-# @profile
+@profile
 def main():
     print('fib')
     limit=32 # this is not too taxing
     # it is best to find an average tme when working on performance
-    fib_values_l = []
-    start1 = timeit.default_timer()
-    for n in range(2, limit+1):
-        r = fib1(n)
-        fib_values_l.append(r)
-    # fib1(40) took about 30 seconds on my laptop
-    end1 = timeit.default_timer()
-    print( fib_values_l ) # find the result of the first 4 members of the sequence
-    print(f'total: {end1-start1}') # about 2 seconds
+    # fib_values_l = []
+    # start1 = timeit.default_timer()
+    # for n in range(2, limit+1):
+    #     r = fib1(n)
+    #     fib_values_l.append(r)
+    # # fib1(40) took about 30 seconds on my laptop
+    # end1 = timeit.default_timer()
+    # print( fib_values_l ) # find the result of the first 4 members of the sequence
+    # print(f'total: {end1-start1}') # about 2 seconds
     fib_values_l = []
     start2 = timeit.default_timer()
     for n in range(2, limit+1):

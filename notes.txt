@@ -65,10 +65,10 @@ Wednesday
 > RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 > multiprocessing
-- why use a thread or a process
-- performance and timing
-- profiling with @profile and cProfile
-- after lunch review exercise
+> why use a thread or a process
+> performance and timing
+> profiling with @profile and cProfile
+> after lunch review exercise
 - generators
 - prepare for Thursday
 
