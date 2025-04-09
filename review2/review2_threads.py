@@ -12,9 +12,11 @@ def main():
         'Athlone', 'Galway', 'Belfast', 
         'Genoa', 'Cork', 'Kista'
     ]
+    # here we have a list comprehension
     threads = [TempGetter(c) for c in CITIES]
     start = timeit.default_timer()
     # first we kick off all the threads
+    # r=[t.start() for t in threads]
     for thread in threads:
         thread.start()
 
