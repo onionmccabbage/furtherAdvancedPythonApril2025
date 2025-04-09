@@ -53,8 +53,8 @@ Tuesday
 > after lunch review exercise
 
 Wednesday
-- a word about venv...
-- show-and-tell review2
+> a word about venv...
+> show-and-tell review2
 - write thread-safe decorator
 - what if the method is already locked...
 - custom thread decorator to make classes and methods thread safe
