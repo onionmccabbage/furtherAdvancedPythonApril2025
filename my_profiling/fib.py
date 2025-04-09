@@ -23,6 +23,6 @@ def fib2(n):
 
 if __name__ == '__main__':
     start = timeit.default_timer()
-    print(fib2(28)) # 0.14 sec for fib1, 0.00013 for fib2
+    print(fib1(28)) # 0.14 sec for fib1, 0.00013 for fib2
     end=timeit.default_timer()
     print(f'total time: {end-start}')
