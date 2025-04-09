@@ -1,6 +1,10 @@
 import timeit
 from functools import reduce
 
+# we may atain a profile of any code using cProfile
+# python -m cProfile -o profile_output fib.py
+
+
 def fib1(n):
     '''here is a low performance fibonacci function'''
     if n in (0,1):
@@ -14,11 +18,11 @@ def fib2(n):
     sequence = (0,1)
     for _ in range(2, n+2):
         # NB we do not mutate the tuple
-        sequence += (reduce( lambda a,b: a+b, sequence[-2:] ))
+        sequence += (reduce( lambda a,b: a+b, sequence[-2:] ),)
     return sequence[-1] # return the last member of the sequence
 
 if __name__ == '__main__':
     start = timeit.default_timer()
-    print(fib2(28)) # 0.14 sec for fib1
+    print(fib2(28)) # 0.14 sec for fib1, 0.00013 for fib2
     end=timeit.default_timer()
     print(f'total time: {end-start}')
