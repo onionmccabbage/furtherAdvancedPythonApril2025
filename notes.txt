@@ -55,9 +55,9 @@ Tuesday
 Wednesday
 > a word about venv...
 > show-and-tell review2
-- write thread-safe decorator
-- what if the method is already locked...
-- custom thread decorator to make classes and methods thread safe
+> thread-safe decorator
+> what if the method is already locked...
+> custom thread decorator to make classes and methods thread safe
 - the 'with' operator
 - asyncio (3.7 or better)
   see https://docs.python.org/3/library/asyncio-task.html#coroutines
