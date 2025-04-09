@@ -64,7 +64,7 @@ Wednesday
 > daemon threads, thread events
 > RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
-- multiprocessing
+> multiprocessing
 - why use a thread or a process
 - performance and timing
 - profiling with @profile and cProfile
