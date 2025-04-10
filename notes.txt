@@ -81,13 +81,13 @@ Thursday
   > just use existing VSCode (or similar)
   > use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
   > or just write NORMAL python modules
-- Python for Data Analysis
+> Python for Data Analysis
   we will need:
-  - Jupyter notebooks
-  - numpy
-  - pandas
-  - matplotlib
-- using Jupyter notebooks
+  > Jupyter notebooks
+  > numpy
+  > pandas
+  > matplotlib
+> using Jupyter notebooks
    The easiest way to get all the bits and bobs is to use Anaconda
    Data sources (csv, xlsx, text, db, url...)
    you can 'pip install jupyter' then start it with 'python -m notebook'
