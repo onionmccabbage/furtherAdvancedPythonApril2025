@@ -1,4 +1,4 @@
-Review 4 (Data analysis)
+Review 4 (Data analysis) carry on until 3:25
 ========================
 Create a new Jupyter Notebook (or a simple python module)
 - read in external data (data/flights.csv) into a data frame
