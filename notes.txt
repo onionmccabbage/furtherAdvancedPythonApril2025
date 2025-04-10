@@ -92,7 +92,7 @@ Thursday
    Data sources (csv, xlsx, text, db, url...)
    you can 'pip install jupyter' then start it with 'python -m notebook'
    then you will also need to pip install numpy, pandas etc.
-- numpy and data structures: the arange and array 
+> numpy and data structures: the arange and array 
 - pandas: series and data-frame
   NaN, creating stuctures, analysis (stats)
 - data cleansing and preparation
