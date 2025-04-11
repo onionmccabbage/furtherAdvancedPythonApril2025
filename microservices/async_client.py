@@ -17,6 +17,7 @@ def makeBytes(values):
     print(b) # print will nicely format the bytes as text
     return b
 
+
 def writeBytes(b):
     # persist these bytes into a file
     try:
@@ -27,7 +28,6 @@ def writeBytes(b):
         print(f'File already exists {err}')
     except Exception as err:
         print(f'something went wrong {err}')
-
 
 if __name__ == '__main__':
     # asyncio.run(my_client('is it coffee yet'))
