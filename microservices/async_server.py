@@ -8,6 +8,20 @@ async def handleRequests(reader, writer):
     message = data.decode() # convert the bytes to a string
     addr = writer.get_extra_info('peername')
     print(f'Received {message} from {addr}')
+    # additional features
+    # commit every message received to a byte file
+    writeBytes(data)
+
+def writeBytes(n):
+    '''persist n in a byte file'''
+    print(f'writing {n} to byte file')
+    # we need a file access object
+    with open('my_byte_log', 'ab') as fout: # 'a' will append 'b' for bytes (default is 't' for text)
+        if type(n) == bytes:
+            fout.write(n)
+        elif type(n) == str:
+            fout.write(n.encode())
+        fout.write(b'\n') # a new line character as a byte string
 
 async def main():
     '''start the microservice server'''
