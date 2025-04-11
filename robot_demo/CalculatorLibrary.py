@@ -47,6 +47,7 @@ class CalculatorLibrary(object):
         if self._result != expected:
             raise AssertionError('%s != %s' % (self._result, expected))
 
+    
     def should_cause_error(self, expression):
         """Verifies that calculating the given ``expression`` causes an error.
 
