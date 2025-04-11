@@ -95,26 +95,29 @@ Thursday
 > numpy and data structures: the arange and array 
 > pandas: series and dataframe
   NaN, creating stuctures, analysis (stats)
-- data cleansing and preparation
+> data cleansing and preparation
 > descriptive statistics
 > handling files and remote data
 > after lunch review exercise
-- careful: exporting a notebook does not add 'print' statements
+> careful: exporting a notebook does not add 'print' statements
 
 Friday
-- data vizualisation with matplotlib
+ q robot - change existing library: venv, requirements.txt and custom libraries
+> data vizualisation with matplotlib
 - statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
+  https://www.tylervigen.com/spurious-correlations
 - review of microservices (inc. multi threading) and asyncio
-- finish the byte-write thread example
-- run flask as development server (auto restart)
+- byte-write thread
+- run Flask as development server (auto restart)
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app run declaration
   see https://flask.palletsprojects.com/en/2.3.x/
 - after lunch review exercise
 - end of course feedback
- 
+
+
 Some Websites
    https://www.geeksforgeeks.org/python-design-patterns/
    https://python-patterns.guide/
@@ -124,3 +127,4 @@ Some Websites
    https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
    https://www.practicepython.org/exercises/
 
+also read up Timnit Gembru 
