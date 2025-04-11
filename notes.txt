@@ -107,10 +107,10 @@ Friday
 - statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
   https://www.tylervigen.com/spurious-correlations
-- review of microservices (inc. multi threading) and asyncio
-- byte-write thread
-- run Flask as development server (auto restart)
-- Flask:
+> review of microservices (inc. multi threading) and asyncio
+> byte-write thread
+> run Flask as development server (auto restart)
+> Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app run declaration
   see https://flask.palletsprojects.com/en/2.3.x/
