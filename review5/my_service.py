@@ -5,6 +5,7 @@
 
 import socket # this provides a means for services to interact
 import requests
+from weather_client import getWeather
 
 def myServer():
     '''This microservice will receive requests from clients'''
@@ -25,17 +26,11 @@ def myServer():
             break # stop this microservice 
         else:
             # this service is a proxy for the weather API
-            url_template = f'http://api.openweathermap.org/data/2.5/weather?q={buf_str}&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1'
-            print(f'server is trying {url_template}')
-            response = requests.get(url_template)
-            data = response.json()
-            print(f'Server received {data}')
-            # read one part of the weahter report
-            descr = data['weather'][0]['description']
-            # send a response to the client
-            # response = buf.upper()
-            # client.send(response)
-            client.send(descr.encode())
+            try:
+                r = getWeather(buf_str)
+                client.send(r)
+            except Exception as err:
+                print(err)
 
 if __name__ == '__main__':
     myServer()

@@ -23,10 +23,13 @@ def myClient(city='Galway'):
 
 if __name__ == '__main__':
     cities = ['London', 'Canberra', 'Maine', 'Hull', 'Belfast']
+    tl = []
     for city in cities:
         t = Thread(target=myClient, args=(city,))
         t.start()
-        t.join()
-    # print( sys.argv[1:] )
-    # myClient()
+        tl.append(t)
+    for _ in tl:
+        _.join()
+    print( sys.argv[1:] )
+    myClient()
 
